@@ -1,8 +1,8 @@
 <template>
 <section>
         <div class="row gy-4" v-if="store.cardList.length > 0">
-            <div class="col-12 col-md-4 col-lg-3" v-for="(item, index) in store.cardList" :key="item.id">
-                <CardComponent :image="item.img" :name="item.name" :archetype="item.archetype"  />
+            <div class="col-12 col-md-4 col-lg-3" >
+                <CardComponent v-for="(item,index) in store.cardList"  :img="item.card_images[0].image_url" :name="item.name" :type="item.type"  />
             </div>
         </div>
     </section>
@@ -10,11 +10,11 @@
 
 <script>
 import {store} from '../data/store.js';
-import cardComponent from './CardComponent.vue';
+import CardComponent from './CardComponent.vue';
     export default {
-        name:'CardList',
+        name:'CardBox',
         components : {
-            cardComponent
+            CardComponent
         },
         data (){
             return{
@@ -25,5 +25,6 @@ import cardComponent from './CardComponent.vue';
 </script>
 
 <style lang="scss" scoped>
+
 
 </style>

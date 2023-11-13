@@ -1,27 +1,39 @@
 <template>
     <div class="card bg-transparent border-0 ">
-        <img :src="img" class="card-img-top" :alt="name">
-        <div class="card-body text-center">
-            <h5 class="card-title">{{ archetype }}</h5>
-            <h6 class="card-title">{{ name }}</h6>
+        <img :src="img" :alt="name" class="card-img">
+        
+            <h5>{{ type }}</h5>
+            <h6>{{name }}</h6>
             
 
-        </div>
+        
     </div>
 </template>
 
 <script>
-export default {
 
-    name: 'CardComponent',
-    props: {
+import {store} from '../data/store.js';
+import axios from 'axios'
+
+export default {
+     name: "CardComponent",
+     props: {
        name : String,
-       archetype : String,
+      type : String,
        img : String,
     },
+    components: {
+        store,
+        axios
+    }
 }
 </script>
 
 <style scoped>
 
+.card-img{
+    display: block;
+    width: 200px;
+    height: 200px;
+}
 </style>
