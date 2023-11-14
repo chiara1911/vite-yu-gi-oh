@@ -32,10 +32,14 @@ export default {
       console.log(search);
       if (search) {
         this.params = {
-          status: search,
-        };
-      } else {
-        this.params = null;
+          archetype: search,
+        }
+      } else{
+        this.params ={
+            archetype: cardList,
+            
+        } , console.log('else ' + this.params)
+       
       }
 
       this.getCharacters();
@@ -43,9 +47,10 @@ export default {
 
     //metodo per settare i personaggi//
     getCharacters() {
-      const url = store.apiUrl + store.endPoint.archetype;
+      const url = store.apiUrl ;
       console.log('url ' + url)
       axios.get(url,{ params: this.params}).then((response) => {
+        
         store.cardList = response.data.data;
         console.log(store.cardList);
       });
