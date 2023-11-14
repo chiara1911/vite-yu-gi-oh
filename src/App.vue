@@ -45,7 +45,7 @@ export default {
     getCharacters() {
       const url = store.apiUrl + store.endPoint.archetype;
       console.log('url ' + url)
-      axios.get(url).then((response) => {
+      axios.get(url,{ params: this.params}).then((response) => {
         store.cardList = response.data.data;
         console.log(store.cardList);
       });
