@@ -23,6 +23,7 @@ export default {
   data() {
     return {
       store,
+      params: null
     };
   },
   methods: {
@@ -34,11 +35,9 @@ export default {
         this.params = {
           archetype: search,
         }
-      } else{
-        this.params ={
-            archetype: cardList,
-            
-        } , console.log('else ' + this.params)
+      }     
+      else{
+        this.params = null
        
       }
 
