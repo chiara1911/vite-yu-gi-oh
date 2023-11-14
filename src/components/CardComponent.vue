@@ -3,7 +3,7 @@
         <img :src="img" :alt="name">
         <div class="d-flex flex-column text-center my-auto ">
             <span class="text-uppercase text-light fw-semibold ">{{name }}</span>  
-            <span >{{ type }}</span>
+            <span >{{ archetype }}</span>
             
         </div>
                     

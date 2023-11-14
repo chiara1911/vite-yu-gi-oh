@@ -1,7 +1,7 @@
 <template>
     <select name="search-component" id="search-component" v-model="typeSelect" @change="passData">
         <option value="tutti" >tutti</option>
-        <option value="alien1" >alien1</option>
+        <option value="alien" >alien</option>
         <option value="alien2" >alien2</option>
         <option value="alien3" >alien3</option>
     </select>
@@ -22,6 +22,7 @@
                 this.$emit('filterChange', this.typeSelect);
                 console.log('pass ' + this.passData)
             }
+           
         }
        
         
