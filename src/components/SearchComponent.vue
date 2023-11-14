@@ -1,0 +1,29 @@
+<template>
+    <select name="search-component" id="search-component" v-model="typeSelect">
+        <option value="tutti" selected>tutti</option>
+        <option value="alien1" >alien1</option>
+        <option value="alien2" >alien2</option>
+        <option value="alien3" >alien3</option>
+    </select>
+</template>
+
+<script>
+
+    export default {
+        name: 'SearchComponent',
+        data(){
+            return {
+                typeSelect:''
+            }
+        },
+        methods: {
+
+        }
+       
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+
+</style>

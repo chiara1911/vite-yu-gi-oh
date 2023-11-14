@@ -1,10 +1,12 @@
 <template>
-    <div class="card bg-transparent border-0 ">
-        <img :src="img" :alt="name" class="card-img">
-        
-            <h5>{{ type }}</h5>
-            <h6>{{name }}</h6>
+    <div class=" m-2" id="cardEl">
+        <img :src="img" :alt="name">
+        <div class="d-flex flex-column text-center my-auto ">
+            <span class="text-uppercase text-light fw-semibold ">{{name }}</span>  
+            <span >{{ type }}</span>
             
+        </div>
+                    
 
         
     </div>
@@ -19,7 +21,7 @@ export default {
      name: "CardComponent",
      props: {
        name : String,
-      type : String,
+      archetype : String,
        img : String,
     },
     components: {
@@ -31,9 +33,8 @@ export default {
 
 <style scoped>
 
-.card-img{
-    display: block;
-    width: 200px;
-    height: 200px;
+#cardEl{
+    background-color: #d48f38;
+    width: calc( (100% / 5) - 16px);
 }
 </style>

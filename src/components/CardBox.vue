@@ -1,11 +1,17 @@
-<template>
-<section>
-        <div class="row gy-4" v-if="store.cardList.length > 0">
-            <div class="col-12 col-md-4 col-lg-3" >
+<template >
+    <div class="wrapper">
+<div class="container p-5 ">
+    <h6 class="text-light bg-dark p-3 mx-2 mb-0">Found 20 elements</h6>
+    <div class="row mt-0" v-if="store.cardList.length > 0">
+            <div class="col-12 d-flex flex-row flex-wrap" >
                 <CardComponent v-for="(item,index) in store.cardList"  :img="item.card_images[0].image_url" :name="item.name" :type="item.type"  />
             </div>
         </div>
-    </section>
+
+    </div>
+</div>
+        
+   
 </template>
 
 <script>
@@ -26,5 +32,8 @@ import CardComponent from './CardComponent.vue';
 
 <style lang="scss" scoped>
 
+.container{
+    background-color: white;
 
+}
 </style>

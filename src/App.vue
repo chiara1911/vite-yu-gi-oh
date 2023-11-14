@@ -3,7 +3,9 @@
  
   </header>
 
-  <main>
+  <main class="wrapper">
+
+<SearchComponent />
 <CardBox />
 
   </main>
@@ -12,18 +14,16 @@
 <script>
 import {store} from './data/store.js';
 import axios from 'axios';
-import CardBox from './components/CardBox.vue';
 import CardComponent from './components/CardComponent.vue';
-
-
-
-
-
+import CardBox from './components/cardbox.vue';
+import SearchComponent from './components/SearchComponent.vue';
 export default {
     name: "App",
-    component: {
+    components: {
         CardBox,
-        CardComponent
+        CardComponent,
+        SearchComponent,
+        
     },
     data() {
         return {
@@ -42,7 +42,7 @@ export default {
     created() {
         this.getCharacters();
     },
-    components: { CardBox }
+ 
 }
 </script>
 <style scoped></style>

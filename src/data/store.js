@@ -5,7 +5,11 @@ export const store = reactive({
   endPoint: {
   
   },
-  
-  cardList: [],
+    cardList: [],
+  archetype: [
+  'alien',
+  'blue-eyes',
+  'wizard',
 
+]
 });
